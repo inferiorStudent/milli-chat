@@ -21,7 +21,7 @@
 
 </details>
 
-<div align="center">😭穷也想玩转大模型：尽可能只用最基本的库、用最朴素、不专业的方式动手写一遍，蹭免费GPU完成训练。</div>
+<div align="center">😭穷也想玩转大模型：基于最基本的Hugging Face库，用最朴素、不专业的方式动手写一遍，蹭免费GPU完成训练。</div>
 
 
 ## 项目结构介绍
@@ -81,7 +81,7 @@ tokenizer = transformers.AutoTokenizer.from_pretrained('./out')
 
 ### PPO
 
-> [!WARN]
+> [!WARNING]
 >
 > 直接使用原模型的参数权重会有如下警告信息：
 > Some weights of SLMForSequenceClassification were not initialized from the model checkpoint at ./out/step_0 and are newly initialized: ['score.weight']
@@ -103,3 +103,7 @@ tokenizer = transformers.AutoTokenizer.from_pretrained('./out')
 3. 重新用更多、更高质量的语料库进行预训练。
 
 初步目标：能顺利完成较长单步对话就行。
+
+# 致谢
+
+预训练中文语料库的使用：[github: baidu-wiki-500w](https://github.com/CyberCommy/baidu-wiki-500w)
